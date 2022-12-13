@@ -2,28 +2,31 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bucle</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bucle</title>
 </head>
 
 <body>
-    <script>
-		let x = 1;
-		const cuantos = 5;
-		let suma = 0;
-
-		while (x <= cuantos) {
-			const valor = parseInt(prompt(`Ingrese el valor ${x}  de ${cuantos}:`, ''));
-			suma += valor;
-			x++;
+	<script>
+		let numeros = [7, 14, 87, 33, 25, 48]; //Esto es un ARRAY.
+		let mayor;
+		document.write(numeros);
+		mayor = numeros[0]; // Asigno valor de mayor a la posicion 0 del ARRAY.
+		for (let i = 0; i < 5; i++) // BUCLE que inicia en posicion con valor (i) 0 y llega a posicion 5, recorriendo de a 1 posicion.
+		{
+			if (numeros[i] > mayor) // Si la posicion del ARRAY recorrida, tiene la cifra mas alta a la posicion 0.
+			{
+				mayor = numeros[i]; // Posicion mas alta de ARRAY, pasa a ser MAYOR.
+			}
 		}
-		document.write(x + " ");
+		document.write(' --- El numero mayor es ', mayor, ' ---');
 
-        /*Ejercicio 2
-        Haciendo uso de los bucles, recorrer un array de números y determinar cual es el mayor*/
-    </script>
+
+		/*Ejercicio 2
+		Haciendo uso de los bucles, recorrer un array de números y determinar cual es el mayor*/
+	</script>
 </body>
 
 </html>
